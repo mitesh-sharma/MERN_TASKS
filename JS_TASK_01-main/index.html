@@ -1,0 +1,41 @@
+<!-- Submitted by: -->
+<!-- Khushi Ojha (20BHI10053) -->
+<!-- VIT BHOPAL UNIVERSITY -->
+<!-- Task 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <script>
+    function showdate() {
+      var currentDate = new Date();
+      var dateElement = document.getElementById("ShowDate");
+      var day = currentDate.getDate();
+      var monthIndex = currentDate.getMonth();
+      var year = currentDate.getFullYear();
+      var months = [
+        "January", "February", "March", "April", "May", "June", 
+        "July", "August", "September", "October", "November", "December"
+      ];
+      var formattedDate = day + "/" + months[monthIndex] + "/" + year;
+      dateElement.innerHTML = formattedDate;
+    }
+    function showtime() {
+      var currentDate = new Date();
+      var timeElement = document.getElementById("ShowTime");
+      var formattedTime = currentDate.toString();
+      timeElement.innerHTML = formattedTime;
+    }
+    </script>
+</head>
+<body>
+    <h1>Show Date and Time</h1>
+    <button onclick="showdate()">show date</button>
+    <p id="ShowDate"></p>
+    <button onclick="showtime()">show Time</button>
+    <p id="ShowTime"></p>
+</body>
+</html>
